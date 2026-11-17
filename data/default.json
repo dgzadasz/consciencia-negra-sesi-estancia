@@ -1,11 +1,11 @@
 {
   "escola": "SESI SENAI Estância",
-  "turma": "2º B",
-  "autores": "Diego Ivens e Gustavo",
+  "turma": "2ITC B",
+  "autores": "Diego & Gustavo",
   "hero": {
     "chamada": "20 de novembro · Dia Nacional de Zumbi e da Consciência Negra",
     "titulo": "Consciência Negra",
-    "texto": "Um projeto da turma do 2º B sobre memória, resistência e as pessoas negras que construíram — e seguem construindo — o Brasil.",
+    "texto": "Um projeto da turma do 2ITC B sobre memória, resistência e as pessoas negras que construíram — e seguem construindo — o Brasil.",
     "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Comemora%C3%A7%C3%B5es_do_Dia_da_Consci%C3%AAncia_Negra_na_Serra_da_Barriga_%2822925613720%29.jpg/1280px-Comemora%C3%A7%C3%B5es_do_Dia_da_Consci%C3%AAncia_Negra_na_Serra_da_Barriga_%2822925613720%29.jpg",
     "credito": "Comemoração na Serra da Barriga (AL) · Wikimedia Commons, CC BY 2.0"
   },
@@ -20,7 +20,7 @@
     { "hora": "--:--", "titulo": "Abertura", "descricao": "Boas-vindas e por que lembramos o 20 de novembro." },
     { "hora": "--:--", "titulo": "Leitura de poemas", "descricao": "Alunos declamam poemas sobre identidade e resistência." },
     { "hora": "--:--", "titulo": "Apresentações dos grupos", "descricao": "Personalidades negras e a história do Brasil." },
-    { "hora": "--:--", "titulo": "Site e QR Code", "descricao": "Diego Ivens e Gustavo (2º B) apresentam o projeto." },
+    { "hora": "--:--", "titulo": "Site e QR Code", "descricao": "Diego & Gustavo (2ITC B) apresentam o projeto." },
     { "hora": "--:--", "titulo": "Encerramento", "descricao": "Palavras finais e foto da turma." }
   ],
   "origem": {
