@@ -26,7 +26,7 @@ function montar(c) {
   const d = c.evento.data ? new Date(c.evento.data) : null;
   if (d && !isNaN(d)) {
     $('#ev-data').textContent = `${d.getDate()} de ${MESES[d.getMonth()]} de ${d.getFullYear()}` + (d.getHours() || d.getMinutes() ? ` · ${String(d.getHours()).padStart(2, '0')}h${String(d.getMinutes()).padStart(2, '0')}` : '');
-    relogio(d);
+
   }
   $('#ev-aviso').textContent = c.evento.aviso || '';
   $('#prog').innerHTML = (c.programacao || []).map((p) => `<li class="rv${p.hora ? '' : ' sem-hora'}">${p.hora ? `<time>${esc(p.hora)}</time>` : ''}<div><h3>${esc(p.titulo)}</h3><p>${esc(p.descricao)}</p></div></li>`).join('');

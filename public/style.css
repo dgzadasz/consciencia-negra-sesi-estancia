@@ -54,7 +54,7 @@ section{padding:110px 0}
 /* evento */
 .evento{background:var(--tinta);color:var(--papel)}
 .evento .num{color:var(--ocre)}
-.ev-cab{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:start}
+.ev-cab{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:start}
 .ev-cab .num{writing-mode:vertical-rl;transform:rotate(180deg)}
 .ev-cab .num::after{display:none}
 .ev-info{font-size:20px;color:var(--ocre);margin-bottom:10px}
