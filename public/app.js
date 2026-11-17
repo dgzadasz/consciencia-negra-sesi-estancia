@@ -29,7 +29,7 @@ function montar(c) {
     relogio(d);
   }
   $('#ev-aviso').textContent = c.evento.aviso || '';
-  $('#prog').innerHTML = (c.programacao || []).map((p) => `<li class="rv"><time>${esc(p.hora || '--:--')}</time><div><h3>${esc(p.titulo)}</h3><p>${esc(p.descricao)}</p></div></li>`).join('');
+  $('#prog').innerHTML = (c.programacao || []).map((p) => `<li class="rv${p.hora ? '' : ' sem-hora'}">${p.hora ? `<time>${esc(p.hora)}</time>` : ''}<div><h3>${esc(p.titulo)}</h3><p>${esc(p.descricao)}</p></div></li>`).join('');
 
   // origem
   img($('#origem-img'), c.origem.imagem, c.origem.credito, $('#origem-cred'));

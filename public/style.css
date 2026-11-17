@@ -67,6 +67,7 @@ section{padding:110px 0}
 .aviso:empty{display:none}
 .prog{list-style:none;border-top:1px solid #ffffff33;margin-top:14px}
 .prog li{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid #ffffff33;transition:background .25s,padding .25s}
+.prog li.sem-hora{grid-template-columns:1fr}
 .prog li:hover{background:#ffffff08;padding-left:10px}
 .prog time{font:600 30px var(--serif);color:var(--ocre);font-variant-numeric:tabular-nums}
 .prog h3{font-size:26px;margin-bottom:4px}

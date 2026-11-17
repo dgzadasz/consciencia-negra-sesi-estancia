@@ -4,14 +4,14 @@ let dados = null, sujo = false, abaAtual = 'apresentacao';
 
 // ---------- definição do painel ----------
 const ABAS = [
-  { id: 'apresentacao', nome: 'Apresentação e horários', ajuda: 'Coloque a data e os horários quando souber. Se ainda não souber um horário, deixe "--:--".', campos: [
+  { id: 'apresentacao', nome: 'Apresentação e horários', ajuda: 'O horário de cada atividade é opcional: se deixar vazio, ele não aparece no site.', campos: [
     { k: 'evento.titulo', r: 'Título da seção' },
     { k: 'evento.data', r: 'Data e hora de início (usada na contagem regressiva)', t: 'data' },
     { k: 'evento.local', r: 'Local' },
     { k: 'evento.texto', r: 'Texto', t: 'area' },
     { k: 'evento.aviso', r: 'Aviso acima da programação', d: 'Ex.: "Horários a confirmar". Deixe vazio para esconder.' },
-    { k: 'programacao', r: 'Programação', t: 'lista', item: 'Atividade', novo: { hora: '--:--', titulo: '', descricao: '' }, campos: [
-      { k: 'hora', r: 'Horário', d: 'Ex.: 08:30' }, { k: 'titulo', r: 'Atividade' }, { k: 'descricao', r: 'Descrição', t: 'area' }] },
+    { k: 'programacao', r: 'Programação', t: 'lista', item: 'Atividade', novo: { hora: '', titulo: '', descricao: '' }, campos: [
+      { k: 'hora', r: 'Horário (opcional)', d: 'Deixe vazio para não mostrar horário.' }, { k: 'titulo', r: 'Atividade' }, { k: 'descricao', r: 'Descrição', t: 'area' }] },
   ] },
   { id: 'textos', nome: 'Textos e capa', campos: [
     { k: 'hero.chamada', r: 'Frase pequena da capa' },
