@@ -1,0 +1,10 @@
+{
+  "name": "consciencia-negra-sesi-senai-estancia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site do projeto Consciência Negra (SESI SENAI Estância) com painel de edição",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" },
+  "dependencies": { "pg": "^8.13.1" }
+}

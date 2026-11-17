@@ -1,0 +1,68 @@
+{
+  "escola": "SESI SENAI Estância",
+  "turma": "2º B",
+  "autores": "Diego Ivens e Gustavo",
+  "hero": {
+    "chamada": "20 de novembro · Dia Nacional de Zumbi e da Consciência Negra",
+    "titulo": "Consciência Negra",
+    "texto": "Um projeto da turma do 2º B sobre memória, resistência e as pessoas negras que construíram — e seguem construindo — o Brasil.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Comemora%C3%A7%C3%B5es_do_Dia_da_Consci%C3%AAncia_Negra_na_Serra_da_Barriga_%2822925613720%29.jpg/1280px-Comemora%C3%A7%C3%B5es_do_Dia_da_Consci%C3%AAncia_Negra_na_Serra_da_Barriga_%2822925613720%29.jpg",
+    "credito": "Comemoração na Serra da Barriga (AL) · Wikimedia Commons, CC BY 2.0"
+  },
+  "evento": {
+    "titulo": "Apresentação na escola",
+    "data": "2026-11-18T08:00",
+    "local": "SESI SENAI Estância",
+    "texto": "Leitura de poemas, apresentações dos grupos e a exposição deste site. Aponte a câmera para o QR Code e acompanhe pelo celular.",
+    "aviso": "Horários a confirmar"
+  },
+  "programacao": [
+    { "hora": "--:--", "titulo": "Abertura", "descricao": "Boas-vindas e por que lembramos o 20 de novembro." },
+    { "hora": "--:--", "titulo": "Leitura de poemas", "descricao": "Alunos declamam poemas sobre identidade e resistência." },
+    { "hora": "--:--", "titulo": "Apresentações dos grupos", "descricao": "Personalidades negras e a história do Brasil." },
+    { "hora": "--:--", "titulo": "Site e QR Code", "descricao": "Diego Ivens e Gustavo (2º B) apresentam o projeto." },
+    { "hora": "--:--", "titulo": "Encerramento", "descricao": "Palavras finais e foto da turma." }
+  ],
+  "origem": {
+    "titulo": "Por que 20 de novembro?",
+    "texto": "Em 20 de novembro de 1695 foi morto Zumbi, último líder do Quilombo dos Palmares, na Serra da Barriga, em Alagoas. Palmares resistiu por quase um século e chegou a reunir milhares de pessoas que fugiram da escravidão.\n\nNos anos 1970, o movimento negro propôs trocar o 13 de maio — data da Lei Áurea, assinada sem nenhuma reparação — pelo 20 de novembro, que lembra a luta feita pelas próprias pessoas negras. Em 2011 a data virou o Dia Nacional de Zumbi e da Consciência Negra, e em 2023 tornou-se feriado nacional.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ant%C3%B4nio_Parreiras_-_Zumbi_2.jpg",
+    "credito": "Zumbi, Antônio Parreiras (1927) · domínio público"
+  },
+  "numeros": [
+    { "valor": "56%", "texto": "da população brasileira se declara preta ou parda (IBGE, Censo 2022)" },
+    { "valor": "~100 anos", "texto": "de resistência do Quilombo dos Palmares" },
+    { "valor": "4,8 mi", "texto": "de africanos trazidos à força ao Brasil, o maior destino do tráfico" },
+    { "valor": "2023", "texto": "ano em que o 20 de novembro virou feriado nacional" }
+  ],
+  "linha": [
+    { "ano": "1530s", "titulo": "Início do tráfico", "texto": "Começa o tráfico de africanos escravizados para o Brasil, que duraria mais de 300 anos.", "imagem": "" },
+    { "ano": "1600s", "titulo": "Palmares", "texto": "Na Serra da Barriga surge o Quilombo dos Palmares, o maior das Américas.", "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Serra_da_Barriga_-_AL.jpg/960px-Serra_da_Barriga_-_AL.jpg" },
+    { "ano": "1695", "titulo": "Morte de Zumbi", "texto": "Em 20 de novembro, Zumbi é morto. A data vira símbolo de resistência.", "imagem": "" },
+    { "ano": "1871", "titulo": "Ventre Livre", "texto": "Filhos de mulheres escravizadas passam a nascer livres — na lei, mas não na prática.", "imagem": "" },
+    { "ano": "1888", "titulo": "Lei Áurea", "texto": "A escravidão é abolida, sem terra, indenização ou escola para os libertos.", "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Lei_%C3%81urea_arquivo_nacional.jpg/960px-Lei_%C3%81urea_arquivo_nacional.jpg" },
+    { "ano": "1978", "titulo": "Movimento Negro Unificado", "texto": "O MNU é fundado e propõe o 20 de novembro como Dia da Consciência Negra.", "imagem": "" },
+    { "ano": "1988", "titulo": "Racismo é crime", "texto": "A Constituição torna o racismo crime inafiançável e imprescritível.", "imagem": "" },
+    { "ano": "2003", "titulo": "Lei 10.639", "texto": "História e cultura afro-brasileira passam a ser obrigatórias nas escolas.", "imagem": "" },
+    { "ano": "2012", "titulo": "Lei de Cotas", "texto": "Reserva de vagas nas universidades e institutos federais.", "imagem": "" },
+    { "ano": "2023", "titulo": "Feriado nacional", "texto": "O 20 de novembro passa a ser feriado em todo o país.", "imagem": "" }
+  ],
+  "pessoas": [
+    { "nome": "Zumbi dos Palmares", "papel": "Líder quilombola · 1655–1695", "texto": "Comandou Palmares e se tornou o maior símbolo da luta contra a escravidão.", "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ant%C3%B4nio_Parreiras_-_Zumbi_2.jpg" },
+    { "nome": "Luiz Gama", "papel": "Advogado e abolicionista · 1830–1882", "texto": "Vendido como escravo aos 10 anos, aprendeu a ler sozinho e libertou mais de 500 pessoas nos tribunais.", "imagem": "https://upload.wikimedia.org/wikipedia/commons/6/63/Luiz_Gama.jpg" },
+    { "nome": "Machado de Assis", "papel": "Escritor · 1839–1908", "texto": "Neto de pessoas escravizadas, fundou a Academia Brasileira de Letras.", "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Machado_de_Assis_aos_57_anos.jpg/960px-Machado_de_Assis_aos_57_anos.jpg" },
+    { "nome": "André Rebouças", "papel": "Engenheiro e abolicionista · 1838–1898", "texto": "Projetou docas e ferrovias e defendeu a reforma agrária para os libertos.", "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Andr%C3%A9_Pinto_Rebou%C3%A7as%2C_da_cole%C3%A7%C3%A3o_Museu_Hist%C3%B3rico_Nacional%2C_Brasil.jpg/960px-Andr%C3%A9_Pinto_Rebou%C3%A7as%2C_da_cole%C3%A7%C3%A3o_Museu_Hist%C3%B3rico_Nacional%2C_Brasil.jpg" },
+    { "nome": "Carolina Maria de Jesus", "papel": "Escritora · 1914–1977", "texto": "Catadora de papel, escreveu Quarto de Despejo, traduzido para mais de 10 línguas.", "imagem": "https://upload.wikimedia.org/wikipedia/commons/3/32/Carolina_Maria_de_Jesus%2C_1960_%28cropped%29.png" },
+    { "nome": "Lélia Gonzalez", "papel": "Filósofa e ativista · 1935–1994", "texto": "Uma das fundadoras do MNU; pensou o racismo e o lugar da mulher negra no Brasil.", "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/44/L%C3%A9lia_Gonzalez_by_Cezar_Loureiro.jpg" },
+    { "nome": "Milton Santos", "papel": "Geógrafo · 1926–2001", "texto": "Único brasileiro a receber o Prêmio Vautrin Lud, o “Nobel” da geografia.", "imagem": "https://upload.wikimedia.org/wikipedia/commons/1/19/Milton_Santos.jpg" }
+  ],
+  "cultura": {
+    "titulo": "Cultura que resiste",
+    "texto": "Capoeira, samba, maracatu, congada, o candomblé e a culinária fazem parte da herança africana no Brasil. Em Sergipe, a Taieira, o Lambe-Sujo e Caboclinho de Laranjeiras e o samba de coco mantêm essa memória viva.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/CapoeiraEarle_02.JPG/960px-CapoeiraEarle_02.JPG",
+    "credito": "Capoeira, Augustus Earle (c. 1822) · domínio público"
+  },
+  "poemas": [],
+  "galeria": [],
+  "rodape": "Projeto escolar · Imagens históricas do Wikimedia Commons, com créditos em cada foto."
+}

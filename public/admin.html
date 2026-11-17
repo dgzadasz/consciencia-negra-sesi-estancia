@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Painel · Consciência Negra</title>
+<style>
+:root{--papel:#f6f2ea;--tinta:#17120e;--suave:#6a6056;--terra:#b4432b;--ocre:#d6981f;--mata:#1f5a3c;--linha:#d8cebd;--branco:#fff}
+*{box-sizing:border-box;margin:0}
+body{background:var(--papel);color:var(--tinta);font:15px/1.5 system-ui,Segoe UI,Arial,sans-serif}
+button,input,textarea{font:inherit}
+.login{max-width:360px;margin:12vh auto;background:var(--branco);padding:32px;border:1px solid var(--linha)}
+.login h1{font:800 26px Georgia,serif;margin-bottom:6px}
+.login p{color:var(--suave);margin-bottom:18px}
+input[type=text],input[type=password],input[type=datetime-local],textarea{width:100%;padding:9px 11px;border:1px solid var(--linha);background:var(--branco);border-radius:4px}
+input:focus,textarea:focus{outline:2px solid var(--ocre);border-color:transparent}
+textarea{min-height:90px;resize:vertical}
+.bt{background:var(--tinta);color:#fff;border:0;padding:10px 16px;border-radius:4px;cursor:pointer;font-weight:600}
+.bt:hover{background:#3a2e24}
+.bt.sec{background:transparent;color:var(--tinta);border:1px solid var(--linha)}
+.bt.sec:hover{background:#0000000a}
+.bt.mini{padding:4px 9px;font-size:13px}
+.bt.perigo{color:var(--terra)}
+.erro{color:var(--terra);margin-top:10px;min-height:20px}
+header{position:sticky;top:0;z-index:5;background:var(--tinta);color:#fff;display:flex;align-items:center;gap:16px;padding:12px 20px;flex-wrap:wrap}
+header h1{font:700 17px Georgia,serif;flex:1}
+header a{color:#fff;font-size:14px}
+#status{font-size:13px;color:var(--ocre)}
+.abas{display:flex;gap:2px;padding:0 20px;background:#e9e2d4;overflow-x:auto}
+.abas button{border:0;background:none;padding:12px 14px;cursor:pointer;font-weight:600;color:var(--suave);border-bottom:3px solid transparent;white-space:nowrap}
+.abas button.ativa{color:var(--tinta);border-color:var(--terra)}
+main{max-width:900px;margin:0 auto;padding:26px 20px 120px}
+.ajuda{background:#fff7e3;border-left:3px solid var(--ocre);padding:10px 14px;margin-bottom:20px;color:#5a4a2a}
+.campo{margin-bottom:16px}
+.campo>label{display:block;font-weight:600;margin-bottom:4px}
+.campo small{color:var(--suave)}
+.item{background:var(--branco);border:1px solid var(--linha);padding:16px;margin-bottom:12px;border-radius:4px}
+.item-cab{display:flex;gap:6px;align-items:center;margin-bottom:10px}
+.item-cab b{flex:1;color:var(--suave);font-size:13px}
+.imgcampo{display:flex;gap:12px;align-items:flex-start}
+.imgcampo .prev{width:90px;height:90px;object-fit:cover;background:#eee;border:1px solid var(--linha);flex:none}
+.imgcampo .lado{flex:1;display:grid;gap:6px}
+.imgcampo .acoes{display:flex;gap:6px;flex-wrap:wrap}
+.salvar{position:fixed;right:20px;bottom:20px;z-index:6;box-shadow:0 6px 20px #0003;padding:14px 22px;font-size:16px}
+.salvar.sujo{background:var(--terra)}
+.grid2{display:grid;grid-template-columns:120px 1fr;gap:10px}
+#qrcanvas{width:100%;max-width:540px;height:auto;display:block;margin:10px 0;border:1px solid var(--linha)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="login" id="tela-login" hidden>
+  <h1>Painel do site</h1>
+  <p>Área só para quem organiza o projeto.</p>
+  <form id="f-login">
+    <input type="password" id="senha" placeholder="Senha" autocomplete="current-password" required>
+    <button class="bt" style="width:100%;margin-top:12px">Entrar</button>
+    <p class="erro" id="erro-login"></p>
+  </form>
+</div>
+
+<div id="tela-painel" hidden>
+  <header><h1>Painel · Consciência Negra</h1><span id="status"></span><a href="/" target="_blank">Ver site ↗</a><button class="bt sec mini" id="sair" style="color:#fff;border-color:#ffffff55">Sair</button></header>
+  <nav class="abas" id="abas"></nav>
+  <main id="conteudo"></main>
+  <button class="bt salvar" id="salvar">Salvar alterações</button>
+</div>
+
+<script src="/qrcode.js"></script>
+<script src="/admin.js"></script>
+</body>
+</html>

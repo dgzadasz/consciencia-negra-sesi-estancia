@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consciência Negra · SESI SENAI Estância</title>
+<meta name="description" content="Projeto da turma do 2º B do SESI SENAI Estância sobre o Dia da Consciência Negra.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topo">
+  <a class="marca" href="#">20·11 <span data-c="escola"></span></a>
+  <nav id="menu">
+    <a href="#evento">Apresentação</a><a href="#origem">Origem</a><a href="#linha">Linha do tempo</a><a href="#pessoas">Pessoas</a><a href="#cultura">Cultura</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <figure class="hero-foto"><img id="hero-img" alt=""><figcaption id="hero-cred"></figcaption></figure>
+  <div class="hero-txt">
+    <p class="sobre" data-c="hero.chamada"></p>
+    <h1 data-c="hero.titulo"></h1>
+    <p class="lead" data-c="hero.texto"></p>
+    <a class="seta" href="#evento">Ver a programação ↓</a>
+  </div>
+</section>
+
+<div class="faixa" aria-hidden="true"></div>
+
+<section class="evento" id="evento">
+  <div class="wrap">
+    <div class="ev-cab rv">
+      <p class="num">01</p>
+      <div>
+        <h2 data-c="evento.titulo"></h2>
+        <p class="ev-info"><b id="ev-data"></b> · <span data-c="evento.local"></span></p>
+        <p data-c="evento.texto"></p>
+      </div>
+      <div class="relogio" id="relogio"></div>
+    </div>
+    <p class="aviso" id="ev-aviso"></p>
+    <ol class="prog" id="prog"></ol>
+  </div>
+</section>
+
+<section class="origem" id="origem">
+  <div class="wrap duas">
+    <figure class="rv"><img id="origem-img" alt=""><figcaption id="origem-cred"></figcaption></figure>
+    <div class="rv">
+      <p class="num">02</p>
+      <h2 data-c="origem.titulo"></h2>
+      <div class="corrido" id="origem-txt"></div>
+    </div>
+  </div>
+  <div class="wrap numeros" id="numeros"></div>
+</section>
+
+<section class="linha" id="linha">
+  <div class="wrap"><p class="num">03</p><h2>Linha do tempo</h2><p class="dica">Arraste para o lado →</p></div>
+  <div class="trilho" id="trilho"></div>
+</section>
+
+<section class="pessoas" id="pessoas">
+  <div class="wrap"><p class="num">04</p><h2>Quem fez história</h2><div class="grade" id="grade"></div></div>
+</section>
+
+<section class="cultura" id="cultura">
+  <div class="wrap duas inv">
+    <div class="rv"><p class="num">05</p><h2 data-c="cultura.titulo"></h2><div class="corrido" id="cultura-txt"></div></div>
+    <figure class="rv"><img id="cultura-img" alt=""><figcaption id="cultura-cred"></figcaption></figure>
+  </div>
+</section>
+
+<section class="poemas" id="poemas" hidden>
+  <div class="wrap"><p class="num">06</p><h2>Poemas</h2><div id="lista-poemas"></div></div>
+</section>
+
+<section class="galeria" id="galeria" hidden>
+  <div class="wrap"><p class="num">07</p><h2>Fotos da apresentação</h2><div class="fotos" id="fotos"></div></div>
+</section>
+
+<footer>
+  <div class="faixa" aria-hidden="true"></div>
+  <div class="wrap rodape">
+    <img src="/sesi.png" alt="SESI" class="logo">
+    <div><p><b data-c="escola"></b> · Turma <span data-c="turma"></span></p><p>Feito por <b data-c="autores"></b></p><p class="peq" data-c="rodape"></p></div>
+  </div>
+</footer>
+<script src="/app.js"></script>
+</body>
+</html>
