@@ -17,30 +17,30 @@ async function iniciarBanco() {
   if (!process.env.DATABASE_URL) return;
   const { Pool } = require('pg');
   db = new Pool({ connectionString: process.env.DATABASE_URL, ssl: process.env.DATABASE_URL.includes('render.com') ? { rejectUnauthorized: false } : false });
-  await db.query('CREATE TABLE IF NOT EXISTS conteudo (id int PRIMARY KEY, dados jsonb NOT NULL, atualizado timestamptz DEFAULT now())');
-  await db.query('CREATE TABLE IF NOT EXISTS imagens (id serial PRIMARY KEY, tipo text NOT NULL, bytes bytea NOT NULL, criado timestamptz DEFAULT now())');
+  await db.query('CREATE TABLE IF NOT EXISTS cn_conteudo (id int PRIMARY KEY, dados jsonb NOT NULL, atualizado timestamptz DEFAULT now())');
+  await db.query('CREATE TABLE IF NOT EXISTS cn_imagens (id serial PRIMARY KEY, tipo text NOT NULL, bytes bytea NOT NULL, criado timestamptz DEFAULT now())');
 }
 async function lerConteudo() {
   if (db) {
-    const r = await db.query('SELECT dados FROM conteudo WHERE id=1');
+    const r = await db.query('SELECT dados FROM cn_conteudo WHERE id=1');
     return r.rows[0] ? { ...PADRAO, ...r.rows[0].dados } : PADRAO;
   }
   const f = path.join(DATA, 'content.json');
   return fs.existsSync(f) ? { ...PADRAO, ...JSON.parse(fs.readFileSync(f, 'utf8')) } : PADRAO;
 }
 async function salvarConteudo(d) {
-  if (db) return db.query('INSERT INTO conteudo (id,dados) VALUES (1,$1) ON CONFLICT (id) DO UPDATE SET dados=$1, atualizado=now()', [d]);
+  if (db) return db.query('INSERT INTO cn_conteudo (id,dados) VALUES (1,$1) ON CONFLICT (id) DO UPDATE SET dados=$1, atualizado=now()', [d]);
   fs.writeFileSync(path.join(DATA, 'content.json'), JSON.stringify(d, null, 2));
 }
 async function salvarImagem(tipo, buf) {
-  if (db) return (await db.query('INSERT INTO imagens (tipo,bytes) VALUES ($1,$2) RETURNING id', [tipo, buf])).rows[0].id;
+  if (db) return (await db.query('INSERT INTO cn_imagens (tipo,bytes) VALUES ($1,$2) RETURNING id', [tipo, buf])).rows[0].id;
   const dir = path.join(DATA, 'uploads'); fs.mkdirSync(dir, { recursive: true });
   const id = Date.now().toString(36) + crypto.randomBytes(3).toString('hex');
   fs.writeFileSync(path.join(dir, id), buf); fs.writeFileSync(path.join(dir, id + '.type'), tipo);
   return id;
 }
 async function lerImagem(id) {
-  if (db) { if (!/^\d+$/.test(id)) return null; const r = await db.query('SELECT tipo,bytes FROM imagens WHERE id=$1', [id]); return r.rows[0] ? { tipo: r.rows[0].tipo, bytes: r.rows[0].bytes } : null; }
+  if (db) { if (!/^\d+$/.test(id)) return null; const r = await db.query('SELECT tipo,bytes FROM cn_imagens WHERE id=$1', [id]); return r.rows[0] ? { tipo: r.rows[0].tipo, bytes: r.rows[0].bytes } : null; }
   if (!/^[a-z0-9]+$/.test(id)) return null;
   const f = path.join(DATA, 'uploads', id);
   return fs.existsSync(f) ? { tipo: fs.readFileSync(f + '.type', 'utf8'), bytes: fs.readFileSync(f) } : null;
