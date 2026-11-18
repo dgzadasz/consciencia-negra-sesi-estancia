@@ -59,9 +59,8 @@ function montar(c) {
 
 function slides(fotos) {
   const box = $('#slides'), pontos = $('#pontos'), leg = $('#slide-leg');
-  $('.hero').classList.add('com-slides');
-  box.hidden = false; $('#slide-ctrl').hidden = fotos.length < 2; leg.hidden = false;
-  box.innerHTML = fotos.map((f, i) => `<div class="slide" role="group" aria-label="Foto ${i + 1} de ${fotos.length}"><div class="fundo" style="background-image:url('${esc(f.imagem)}')"></div><img src="${esc(f.imagem)}" alt="${esc(f.legenda || 'Foto da apresentação')}" ${i ? 'loading="lazy"' : ''}></div>`).join('');
+  $('#fotos-topo').hidden = false; $('#slide-ctrl').hidden = fotos.length < 2;
+  box.innerHTML = fotos.map((f, i) => `<div class="slide" role="group" aria-label="Foto ${i + 1} de ${fotos.length}"><img src="${esc(f.imagem)}" alt="${esc(f.legenda || 'Foto da apresentação')}" ${i ? 'loading="lazy"' : ''}></div>`).join('');
   pontos.innerHTML = fotos.map((_, i) => `<i data-i="${i}" title="Foto ${i + 1}"></i>`).join('');
   const els = box.children; let atual = -1, timer;
   const ir = (n) => {
@@ -77,9 +76,9 @@ function slides(fotos) {
   pontos.onclick = (e) => { if (e.target.dataset.i) { ir(+e.target.dataset.i); auto(); } };
   // arrastar com o dedo
   let x0 = null;
-  box.parentElement.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
-  box.parentElement.addEventListener('touchend', (e) => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 45) { ir(atual + (dx < 0 ? 1 : -1)); auto(); } x0 = null; });
-  addEventListener('keydown', (e) => { if (scrollY > innerHeight) return; if (e.key === 'ArrowRight') { ir(atual + 1); auto(); } if (e.key === 'ArrowLeft') { ir(atual - 1); auto(); } });
+  box.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener('touchend', (e) => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 45) { ir(atual + (dx < 0 ? 1 : -1)); auto(); } x0 = null; });
+  addEventListener('keydown', (e) => { if (scrollY > innerHeight * 0.8) return; if (e.key === 'ArrowRight') { ir(atual + 1); auto(); } if (e.key === 'ArrowLeft') { ir(atual - 1); auto(); } });
   document.addEventListener('visibilitychange', () => (document.hidden ? clearInterval(timer) : auto()));
   ir(0); auto();
 }

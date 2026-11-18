@@ -17,15 +17,20 @@
   </nav>
 </header>
 
+<section class="vitrine" id="fotos-topo" hidden>
+  <div class="vitrine-palco" id="slides" aria-roledescription="carrossel" aria-label="Fotos da apresentação"></div>
+  <div class="vitrine-barra">
+    <p class="slide-leg" id="slide-leg"></p>
+    <div class="slide-ctrl" id="slide-ctrl">
+      <button type="button" id="sl-ant" aria-label="Foto anterior">‹</button>
+      <div class="pontos" id="pontos"></div>
+      <button type="button" id="sl-prox" aria-label="Próxima foto">›</button>
+    </div>
+  </div>
+</section>
+
 <section class="hero" id="inicio">
   <figure class="hero-foto"><img id="hero-img" alt=""><figcaption id="hero-cred"></figcaption></figure>
-  <div class="slides" id="slides" hidden aria-roledescription="carrossel" aria-label="Fotos da apresentação"></div>
-  <div class="slide-ctrl" id="slide-ctrl" hidden>
-    <button type="button" id="sl-ant" aria-label="Foto anterior">‹</button>
-    <div class="pontos" id="pontos"></div>
-    <button type="button" id="sl-prox" aria-label="Próxima foto">›</button>
-  </div>
-  <p class="slide-leg" id="slide-leg" hidden></p>
   <div class="hero-txt">
     <p class="sobre" data-c="hero.chamada"></p>
     <h1 data-c="hero.titulo"></h1>
