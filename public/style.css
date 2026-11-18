@@ -122,7 +122,10 @@ section{padding:110px 0}
 .poema small{display:block;color:var(--terra);font-weight:700;margin:4px 0 14px}
 .poema p{font:italic 400 21px/1.7 var(--serif);white-space:pre-line}
 .fotos{columns:3 280px;column-gap:16px}
-.fotos img{width:100%;margin-bottom:16px}
+.fotos figure{break-inside:avoid;margin-bottom:16px;overflow:hidden}
+.fotos img{width:100%;transition:transform .6s}
+.fotos figure:hover img{transform:scale(1.03)}
+.fotos figcaption:empty{display:none}
 
 /* rodapé */
 footer{background:var(--tinta);color:var(--papel)}

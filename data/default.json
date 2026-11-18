@@ -171,6 +171,55 @@
     "credito": "Capoeira, Augustus Earle (c. 1822) · domínio público"
   },
   "poemas": [],
-  "galeria": [],
+  "galeria": [
+    {
+      "imagem": "/fotos/foto-01.jpg",
+      "legenda": "A turma reunida antes da apresentação"
+    },
+    {
+      "imagem": "/fotos/foto-02.jpg",
+      "legenda": "Apresentação de dança"
+    },
+    {
+      "imagem": "/fotos/foto-03.jpg",
+      "legenda": "Dupla durante a dança"
+    },
+    {
+      "imagem": "/fotos/foto-04.jpg",
+      "legenda": "Pintura corporal com símbolos"
+    },
+    {
+      "imagem": "/fotos/foto-05.jpg",
+      "legenda": ""
+    },
+    {
+      "imagem": "/fotos/foto-06.jpg",
+      "legenda": "Preparação: pintura corporal na sala"
+    },
+    {
+      "imagem": "/fotos/foto-07.jpg",
+      "legenda": ""
+    },
+    {
+      "imagem": "/fotos/foto-08.jpg",
+      "legenda": "Fala durante o evento"
+    },
+    {
+      "imagem": "/fotos/foto-09.jpg",
+      "legenda": "Os traços pintados à mão"
+    },
+    {
+      "imagem": "/fotos/foto-10.jpg",
+      "legenda": ""
+    },
+    {
+      "imagem": "/fotos/foto-11.jpg",
+      "legenda": ""
+    },
+    {
+      "imagem": "/fotos/foto-12.jpg",
+      "legenda": ""
+    }
+  ],
   "rodape": "Projeto escolar · Imagens históricas do Wikimedia Commons, com créditos em cada foto."
 }
