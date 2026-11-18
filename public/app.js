@@ -51,10 +51,37 @@ function montar(c) {
   $('#poemas').hidden = !poemas.length;
   $('#lista-poemas').innerHTML = poemas.map((p) => `<div class="poema rv"><h3>${esc(p.titulo)}</h3><small>${esc(p.autor)}</small><p>${esc(p.texto)}</p></div>`).join('');
   const fotos = (c.galeria || []).filter((f) => f.imagem);
-  $('#galeria').hidden = !fotos.length;
-  $('#fotos').innerHTML = fotos.map((f) => `<figure class="rv"><img src="${esc(f.imagem)}" alt="" loading="lazy"><figcaption>${esc(f.legenda)}</figcaption></figure>`).join('');
+  $('#galeria').hidden = true;
+  if (fotos.length) slides(fotos);
 
   revelar();
+}
+
+function slides(fotos) {
+  const box = $('#slides'), pontos = $('#pontos'), leg = $('#slide-leg');
+  $('.hero').classList.add('com-slides');
+  box.hidden = false; $('#slide-ctrl').hidden = fotos.length < 2; leg.hidden = false;
+  box.innerHTML = fotos.map((f, i) => `<div class="slide" role="group" aria-label="Foto ${i + 1} de ${fotos.length}"><div class="fundo" style="background-image:url('${esc(f.imagem)}')"></div><img src="${esc(f.imagem)}" alt="${esc(f.legenda || 'Foto da apresentação')}" ${i ? 'loading="lazy"' : ''}></div>`).join('');
+  pontos.innerHTML = fotos.map((_, i) => `<i data-i="${i}" title="Foto ${i + 1}"></i>`).join('');
+  const els = box.children; let atual = -1, timer;
+  const ir = (n) => {
+    n = (n + fotos.length) % fotos.length; if (n === atual) return;
+    if (atual >= 0) { els[atual].classList.remove('on'); pontos.children[atual].classList.remove('on'); }
+    atual = n; els[n].classList.add('on'); pontos.children[n].classList.add('on');
+    leg.textContent = fotos[n].legenda || '';
+    const prox = els[(n + 1) % fotos.length].querySelector('img'); prox.loading = 'eager';
+  };
+  const auto = () => { clearInterval(timer); timer = setInterval(() => ir(atual + 1), 5500); };
+  $('#sl-prox').onclick = () => { ir(atual + 1); auto(); };
+  $('#sl-ant').onclick = () => { ir(atual - 1); auto(); };
+  pontos.onclick = (e) => { if (e.target.dataset.i) { ir(+e.target.dataset.i); auto(); } };
+  // arrastar com o dedo
+  let x0 = null;
+  box.parentElement.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  box.parentElement.addEventListener('touchend', (e) => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 45) { ir(atual + (dx < 0 ? 1 : -1)); auto(); } x0 = null; });
+  addEventListener('keydown', (e) => { if (scrollY > innerHeight) return; if (e.key === 'ArrowRight') { ir(atual + 1); auto(); } if (e.key === 'ArrowLeft') { ir(atual - 1); auto(); } });
+  document.addEventListener('visibilitychange', () => (document.hidden ? clearInterval(timer) : auto()));
+  ir(0); auto();
 }
 
 function relogio(alvo) {
